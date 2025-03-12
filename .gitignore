@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.py[co]
+
+# Virtual Environments
+venv/
+ENV/
+.venv/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# macOS 관련 파일
+.DS_Store
+
+# Visual Studio Code 관련 파일 (옵션)
+.vscode/
