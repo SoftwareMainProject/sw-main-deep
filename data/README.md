@@ -4,10 +4,11 @@ https://www.kaggle.com/datasets/uttejkumarkandagatla/fall-detection-dataset
 
 # raw 버전
 
-images 파일 -> train: 374 / val: 111 == 총: 485
+train: 374 / val: 111 == 총: 485
+[8:2:0]
 
-labels 파일 -> 해당 이미지의 레이블이 있는 텍스트 파일
-label 구분: Fall Detected, Walking, Sitting
+라벨링
+-> label 구분: Fall Detected, Walking, Sitting (클래스 3개)
 Violet – Fall Detected
 Blue – Walking
 Green – Sitting
@@ -24,6 +25,7 @@ YOLOv8 Oriented Bounding Boxes 버전 데이터셋 다운로드함
 # raw 버전
 
 train: 3148 / val: 899 / test: 450 == 총: 4497
+[7:2:1]
 
 데이터 전처리(Preprocessing)
 -> Auto-Orient 적용됨
@@ -32,9 +34,13 @@ train: 3148 / val: 899 / test: 450 == 총: 4497
 데이터 증강 (Augmentations)
 -> X
 
+라벨링
+-> fall-detected 여부 (클래스 1개)
+
 # augmentation 버전
 
 train: 9444 / val: 899 / test: 450 == 총: 10793
+[8:1:1]
 
 데이터 전처리(Preprocessing)
 -> Auto-Orient 적용됨
@@ -65,6 +71,7 @@ https://universe.roboflow.com/ufddfdd/ur-fall-detection-dataset/dataset/1
 # raw 버전
 
 train: 2000 / val: 400 / test: 200 == 총: 2600
+[7:2:1]
 
 데이터 전처리(Preprocessing)
 -> Auto-Orient 적용됨
@@ -72,3 +79,32 @@ train: 2000 / val: 400 / test: 200 == 총: 2600
 
 데이터 증강 (Augmentations)
 -> X
+
+라벨링
+-> person / fall 여부 (2개 클래스)
+-> 넘어진 상태를 fall로 태깅하고, 일반 서 있거나 앉아 있는 사람을 person으로 별도 라벨링 가능
+
+# --------------------------------------------------
+
+### 4. RoboFlow -3: Fall detection self
+
+https://universe.roboflow.com/fall-detection-vbh5q/fall-detection-self/dataset/1
+
+2번과 이하 동일
+
+# raw 버전
+
+train: 363 / val: 111 / test: 0 == 총: 474
+[::0]
+
+데이터 전처리(Preprocessing)
+-> Auto-Orient 적용됨
+-> Resize to 640x640 (Stretch)
+
+데이터 증강 (Augmentations)
+-> X
+
+라벨링
+-> 0:쓰러짐 / 1: 앉음 / 2: 서있음 (3개 클래스)
+
+# --------------------------------------------------
