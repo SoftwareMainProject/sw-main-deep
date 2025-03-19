@@ -95,7 +95,7 @@ https://universe.roboflow.com/fall-detection-vbh5q/fall-detection-self/dataset/1
 # raw 버전
 
 train: 363 / val: 111 / test: 0 == 총: 474
-[::0]
+[8:2:0]
 
 데이터 전처리(Preprocessing)
 -> Auto-Orient 적용됨
