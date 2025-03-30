@@ -1,0 +1,17 @@
+# config/config.yaml
+
+data:
+  raw_falling_dir: "./dataset/falling" # 넘어지는 데이터셋 원본 경로
+  raw_not_falling_dir: "./dataset/not_falling"
+  processed_dir: "./data/processed" # 전처리 결과 저장 경로
+  train_split_ratio: 0.7
+  val_split_ratio: 0.2
+  test_split_ratio: 0.1
+  img_width: 224
+  img_height: 224
+
+training:
+  batch_size: 4
+  num_epochs: 10
+  learning_rate: 0.001
+  seq_length: 30
